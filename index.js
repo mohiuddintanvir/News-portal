@@ -31,7 +31,12 @@ function elemnet(id) {
         .then(res => res.json())
         .then(data => entertainmentelement(data.data))
 };
+
 const entertainmentelement = fasionnews => {
+    fasionnews.sort((a, b) => {
+        return b.total_view - a.total_view;
+
+    });
     const entertainmentpage = document.getElementById('Entertainment');
     entertainmentpage.innerText = ' ';
     fasionnews.forEach(fasionpage => {
