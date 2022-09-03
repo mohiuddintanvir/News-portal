@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- bootsrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navstyle">
+        <nav>
+
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid ">
+                    <a class="navbar-brand" href="#"><span class="backcolor">On-Time</span> <span
+                            class="color">news</span> </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="nev-emement">
+                            <ul class="navbar-nav   ms-3 mb-lg-0  ">
+                                <li class="nav-item">
+                                    <a class="nav-link " aria-current="page" href="#">News </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">BLOG</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <div class="accordion" id="accordionExample" style="margin-top:10%;">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Difference Between var,let and const?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            var:can be declared without initialization. <br>
+                            let:It can be declared without initialization. <br>
+                            const:It cannot be declared without initialization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Describe about arrow vs regular function?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            Arrow functions - a new feature introduced in ES6 enable writing concise functions in
+                            JavaScript. While both regular and arrow functions work in a similar manner.but Arguments
+                            objects are not available in arrow functions, arguments are available in regular functions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Difference between map,forEach,filter and find?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            forEach VS map: The forEach() method does not create a new array based on the given array.
+                            The map() method creates an entirely new array. The forEach() method returns “undefined“.
+                            The map() method returns the newly created array according to the provided callback
+                            function. <br>
+
+                            filter VS map: map creates a new array by transforming every element in an array
+                            individually. filter creates a new array by removing elements that don't belong. reduce , on
+                            the other hand, takes all of the elements in an array and reduces them into a single value.
+                            Just like map and filter , reduce is defined on Array. <br>
+
+                            find VS filter: The find() method is used to find all the descendant elements of the
+                            selected element. It finds the element in the DOM tree by traversing through the root to
+                            leaf. The filter() method is used to filters all the elements and returns the element that
+                            matches and the element that do not match are removed.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- question-4 -->
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        why need to use tamplate string in javaScript?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            Template strings are a powerful feature of modern JavaScript released in ES6. It lets us
+                            insert/interpolate variables and expressions into strings without needing to concatenate
+                            like in older versions of JavaScript. It allows us to create strings that are complex and
+                            contain dynamic elements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
