@@ -1,0 +1,66 @@
+ .navbar {
+     padding: 20px;
+
+ }
+
+ .navbar-brand {
+     font-size: larger;
+ }
+
+
+ .nev-emement {
+     margin-left: 80%;
+ }
+
+ .nev-emement ul li a {
+     font-size: large;
+ }
+
+ .nev-emement ul li a:hover {
+     color: #cf8f18;
+     font-weight: bolder;
+ }
+
+ .container-fluid {
+     margin-left: 5%;
+
+ }
+
+ .backcolor {
+     background-color: #F2D388;
+     padding: 8px 20px;
+     font-weight: bold;
+     color: rgb(255, 255, 255);
+ }
+
+ .color {
+     color: #cf8f18;
+     font-weight: bold;
+ }
+
+ hr {
+     width: 1650px;
+     margin-left: 80px;
+     margin-top: 50px;
+ }
+
+ /* portal name edit  */
+ .justify-content {
+     list-style: none;
+     padding-left: 50px;
+
+ }
+
+ .justify-content li a {
+     color: #918f8d;
+     text-decoration: none;
+     /* padding-left: 100px; */
+     font-weight: 500;
+     margin-left: 100px;
+
+ }
+
+ .justify-content li a:hover {
+     color: #cf8f18;
+     font-weight: bolder;
+ }
