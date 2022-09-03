@@ -37,20 +37,25 @@ const entertainmentelement = fasionnews => {
     fasionnews.forEach(fasionpage => {
         console.log(fasionpage);
         const fasiondiv = document.createElement('div');
-        fasiondiv.classList.add('col');
+
         fasiondiv.innerHTML = `
-        <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+        <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="..." class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">${fasionpage.author.name}</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                                <button onclick="othertdetails('${fasionpage._id}')" data-bs-toggle="modal" data-bs-target="#exampleModal"> More</button>
-
-                               
-
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          { <button onclick="othertdetails('${fasionpage._id}')" data-bs-toggle="modal" data-bs-target="#exampleModal"> More</button>}
                         </div>
-                    </div>`;
+                      </div>
+                    </div>
+                  </div>
+        `
+
         entertainmentpage.appendChild(fasiondiv);
     });
 
@@ -71,11 +76,16 @@ const showmodel = details => {
     const modalid = document.getElementById('exampleModal');
     const modaltitleid = document.getElementById('exampleModalLabel');
     modaltitleid.innerHTML = `
-    <h5 >${details.author.name} </h5>
+    <h5 >${details.author.name ? details.author.name : 'Name not found '} </h5>
 
     `
-    const modalbody=document.getElementById('modalbody');
-    
+    const modalbody = document.getElementById('modalbody');
+    modalbody.innerHTML = `
+     <h5>${details.total_view ? details.total_view : 'no view found'}</h5>
+    `
 
 }
+
+
+
 
