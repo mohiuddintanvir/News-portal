@@ -42,18 +42,21 @@ const entertainmentelement = fasionnews => {
         <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
+                        <img src="${fasionpage.image_url}" class="img-fluid rounded-start" alt="...">
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
                           <h5 class="card-title">${fasionpage.title}</h5>
-                          <p class="card-text">${fasionpage.details}</p>
+                          <p class="card-text text-truncate">${fasionpage.details}</p>
                           <div class="d-flex">
-                          
+                          <img src="${fasionpage.author.img}" class="img-fluid rounded-circle w-25 h-25 " alt="..."> 
+                          <span> ${fasionpage.author.name}</span>
+                          <i class="fa-solid fa-eye">${fasionpage.total_view}</i>
+                            <button onclick="othertdetails('${fasionpage._id}')" data-bs-toggle="modal" data-bs-target="#exampleModal"> More</button>
                           </div>
 
                           
-                           <button onclick="othertdetails('${fasionpage._id}')" data-bs-toggle="modal" data-bs-target="#exampleModal"> More</button>
+                        
                         </div>
                       </div>
                     </div>
