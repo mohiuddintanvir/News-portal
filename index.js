@@ -4,6 +4,7 @@ function loadnewssection() {
     fetch('https://openapi.programming-hero.com/api/news/categories')
         .then(res => res.json())
         .then(data => getportalname(data.data.news_category))
+
 };
 
 function getportalname(posts) {
@@ -25,14 +26,17 @@ loadnewssection();
 
 // entertainment sector 
 function elemnet(id) {
-    console.log(id)
+
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
     fetch(url)
         .then(res => res.json())
         .then(data => entertainmentelement(data.data))
+    loadSpinner(true);
 };
 
 const entertainmentelement = fasionnews => {
+    const checklength = fasionnews.length;
+    inputfield(checklength);
     fasionnews.sort((a, b) => {
         return b.total_view - a.total_view;
 
@@ -59,9 +63,6 @@ const entertainmentelement = fasionnews => {
                           <i class="fa-solid fa-eye">${fasionpage.total_view}</i>
                             <button onclick="othertdetails('${fasionpage._id}')" data-bs-toggle="modal" data-bs-target="#exampleModal"> More</button>
                           </div>
-
-                          
-                        
                         </div>
                       </div>
                     </div>
@@ -70,7 +71,7 @@ const entertainmentelement = fasionnews => {
 
         entertainmentpage.appendChild(fasiondiv);
     });
-
+    loadSpinner(false);
 }
 
 
@@ -94,6 +95,25 @@ const showmodel = details => {
     const modalbody = document.getElementById('modalbody');
     modalbody.innerHTML = `
      <h5>${details.total_view ? details.total_view : 'no view found'}</h5>
+    `
+
+}
+
+
+const loadSpinner = (isspinner) => {
+    const loadSpiner = document.getElementById("load-spinner");
+    if (isspinner == true) {
+        loadSpiner.classList.remove("d-none");
+    }
+    else {
+        loadSpiner.classList.add("d-none");
+    }
+
+}
+function inputfield(filed) {
+    const inputdide = document.getElementById('inputfild');
+    inputdide.value = `
+    ${filed}'Items for catagory'
     `
 
 }
