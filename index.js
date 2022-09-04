@@ -31,9 +31,22 @@ function elemnet(id) {
     fetch(url)
         .then(res => res.json())
         .then(data => entertainmentelement(data.data))
-    loadSpinner(true);
+        .catch(error => console.log(error))
+    loadSpinner(true)
 };
 
+const loaduserAsync = async () => {
+    const url = `https://openapi.programming-hero.com/api/news/category/${id}`
+    try {
+        const res = await fatch(url);
+        const data = await res.json();
+        entertainmentelement(data.data)
+    }
+    catch (error) {
+        console.log(error, 'There is no data ')
+    }
+
+}
 const entertainmentelement = fasionnews => {
     const checklength = fasionnews.length;
     inputfield(checklength);
@@ -53,7 +66,7 @@ const entertainmentelement = fasionnews => {
                       <div class="col-md-4">
                         <img src="${fasionpage.image_url}" class="img-fluid rounded-start h-100" alt="...">
                       </div>
-                      <div class="col-md-8 col-sm-8 ms-sm-5">
+                      <div class="col-md-8 ">
                         <div class="card-body">
                           <h5 class="card-title">${fasionpage.title ? fasionpage.title : 'No title'}</h5>
                           <p class="card-text text-truncate">${fasionpage.details ? fasionpage.details : 'no details'}</p>
@@ -71,6 +84,7 @@ const entertainmentelement = fasionnews => {
 
         entertainmentpage.appendChild(fasiondiv);
     });
+
     loadSpinner(false);
 }
 
