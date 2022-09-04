@@ -54,6 +54,7 @@ const entertainmentelement = fasionnews => {
         return b.total_view - a.total_view;
 
     });
+    checklength.innerText = '';
     const entertainmentpage = document.getElementById('Entertainment');
     entertainmentpage.innerText = ' ';
     fasionnews.forEach(fasionpage => {
