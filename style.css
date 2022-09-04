@@ -65,3 +65,9 @@
      font-weight: bolder;
  }
 
+ .padding {
+     width: 85%;
+     margin-left: 90px;
+     margin-bottom: 20px;
+     padding: 20px;
+ }

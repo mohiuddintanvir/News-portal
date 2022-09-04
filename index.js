@@ -51,17 +51,17 @@ const entertainmentelement = fasionnews => {
         <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="${fasionpage.image_url}" class="img-fluid rounded-start" alt="...">
+                        <img src="${fasionpage.image_url}" class="img-fluid rounded-start h-100" alt="...">
                       </div>
-                      <div class="col-md-8">
+                      <div class="col-md-8 col-sm-8 ms-sm-5">
                         <div class="card-body">
-                          <h5 class="card-title">${fasionpage.title}</h5>
-                          <p class="card-text text-truncate">${fasionpage.details}</p>
-                          <div class="d-flex">
+                          <h5 class="card-title">${fasionpage.title ? fasionpage.title : 'No title'}</h5>
+                          <p class="card-text text-truncate">${fasionpage.details ? fasionpage.details : 'no details'}</p>
+                          <div class="d-flex ps-5z">
                           <img src="${fasionpage.author.img}" class="img-fluid rounded-circle w-25 h-25 " alt="..."> 
-                          <span> ${fasionpage.author.name}</span>
-                          <i class="fa-solid fa-eye">${fasionpage.total_view}</i>
-                            <button onclick="othertdetails('${fasionpage._id}')" data-bs-toggle="modal" data-bs-target="#exampleModal"> More</button>
+                          <span class="ms-3 mt-4"> ${fasionpage.author.name ? fasionpage.author.name : 'No name is here'}</span>
+                          <i class="fa-solid fa-eye ms-4 mt-4">${fasionpage.total_view}</i>
+                            <button onclick="othertdetails('${fasionpage._id}')" class="ms-3 mt-4 w-25 h-25" data-bs-toggle="modal" data-bs-target="#exampleModal"> More</button>
                           </div>
                         </div>
                       </div>
