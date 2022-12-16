@@ -13,8 +13,14 @@ function getportalname(posts) {
         console.log(post)
         const postdiv = document.createElement('div');
         // postdiv.classList.add('post')
-        postdiv.innerHTML = `    
-        <p class="m-lg-5 ps-lg-5 ms-sm-5 " onclick="elemnet('${post.category_id}')">${post.category_name}</p> 
+        postdiv.innerHTML = `   
+        <div class=" ms-4"> 
+        <button type="button" class="btn  m-lg-4    ms-3 ms-sm-5 text-center"  onclick="elemnet('${post.category_id}')"> ${post.category_name.slice(0)}</button>
+        
+        </div>
+       
+ 
+       
   
 `;
         postcontainer.appendChild(postdiv)
@@ -62,6 +68,7 @@ const entertainmentelement = fasionnews => {
         const fasiondiv = document.createElement('div');
 
         fasiondiv.innerHTML = `
+        
         <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
@@ -75,7 +82,7 @@ const entertainmentelement = fasionnews => {
                           <img src="${fasionpage.author.img}" class="img-fluid rounded-circle w-25 h-25 " alt="..."> 
                           <span class="ms-3 mt-4"> ${fasionpage.author.name ? fasionpage.author.name : 'No name is here'}</span>
                           <i class="fa-solid fa-eye ms-4 mt-4">${fasionpage.total_view}</i>
-                            <button onclick="othertdetails('${fasionpage._id}')" class="ms-3 mt-4 w-25 h-25" data-bs-toggle="modal" data-bs-target="#exampleModal"> More</button>
+                            <button onclick="othertdetails('${fasionpage._id}')" class="ms-3 mt-4 w-25 h-25" data-bs-toggle="modal" data-bs-target="#exampleModal">More</button>
                           </div>
                         </div>
                       </div>

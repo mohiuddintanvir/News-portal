@@ -38,23 +38,60 @@
                     <div class="nev-emement">
                         <ul class="navbar-nav   ms-3 mb-lg-0  ">
                             <li class="nav-item">
-                                <a class="nav-link " aria-current="page" href="#">News </a>
+                                <a class="nav-link " aria-current="page" href="#"> </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="blog.html">BLOG</a>
-                            </li>
+                          
+                           
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <hr class="w-md-75">
+        <!-- <hr class="w-md-75"> -->
     </header>
+    <section>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://bloximages.newyork1.vip.townnews.com/news-journal.com/content/tncms/assets/v3/editorial/0/75/0751f863-c5fa-5a95-8ffc-a91b0ff642d2/638e9b4276198.image.jpg?resize=1200%2C638" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://obamawhitehouse.archives.gov/sites/whitehouse.gov/files/images/1600/Presidents/Four_Presidents.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.theconversation.com/files/500906/original/file-20221214-27-kq7mqq.jpg?ixlib=rb-1.1.0&rect=46%2C0%2C5122%2C2561&q=45&auto=format&w=668&h=324&fit=crop" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
     <main>
 
         <section>
-            <div id="post-container" class="d-lg-flex d-sm-flex ">
+            <div  >
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                      
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="">Click Here For news</span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                          <a class="nav-link active  d-lg-flex bg-danger shadow p-3 mb-5  rounded d-sm-flex " aria-current="page" id="post-container"></a>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
 
             </div>
 
@@ -64,7 +101,10 @@
         </section>
         <section>
             <div>
-                <input type="text" id="inputfild" class=" padding">
+                <h1 id="inputfild"></h1>
+                
+                
+               
             </div>
         </section>
         <section id="load-spinner" class="d-none">
@@ -107,6 +147,10 @@
         </section>
 
     </main>
+    <footer> 
+        <h1 class="text-center p-5 bg-black fs-4 footerset  start-50 mt-lg-3 ">All copy rights reserve for onTime-News</h1>
+    </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
